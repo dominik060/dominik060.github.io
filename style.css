@@ -1,0 +1,107 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: Comic Neue, sans-serif;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;   
+}
+
+/*input[type="checkbox"]{
+    -webkit-appearance: none;
+    visibility: hidden;
+    display: none;
+}
+
+.check{
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 20px;
+    background: #092c3e;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: ease-in 0.5s;
+}
+
+input[type="checkbox"]:checked ~ .check{
+    background: #fff;
+    box-shadow: 0 0 0 1200px #092c3e;
+}*/
+li, a{
+    font-weight: 500;
+    font-size: 25px;
+    color: #F6F6F6;
+    text-decoration: none;
+}
+
+
+header{
+    height: 70px;
+    background-color: #222831;
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: left;
+    align-items: center;
+    padding: 30px 3%;
+}
+
+.logo{
+    cursor: pointer;
+    height: 60px;
+    margin-right: 30px;
+    color: white;
+    
+}
+
+.nav_links{
+    list-style: none;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+    color: #F6F6F6;
+}
+
+.fa-home, .fa-phone, .fa-info{
+    margin: 15;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 0;
+    background-color: #222831;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    color: #F6F6F6;
+    flex-grow: 1;
+    
+}
+
+.footer_text{
+    margin: 5px;
+}
