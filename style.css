@@ -85,10 +85,6 @@ header{
     color: #F6F6F6;
 }
 
-.fa-home, .fa-phone, .fa-info{
-    margin: 20;
-}
-
 footer{
     display: flex;
     justify-content: center;
