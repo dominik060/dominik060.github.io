@@ -40,6 +40,7 @@ input[type="checkbox"]:checked ~ .check{
     background: #fff;
     box-shadow: 0 0 0 1200px #092c3e;
 }*/
+
 li, a{
     font-weight: 500;
     font-size: 25px;
@@ -85,7 +86,7 @@ header{
 }
 
 .fa-home, .fa-phone, .fa-info{
-    margin: 15;
+    margin: 20;
 }
 
 footer{
