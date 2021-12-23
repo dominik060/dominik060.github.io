@@ -13,7 +13,11 @@ section{
     width: 100vw;
     height: 100vw;
     color: #fff;
+<<<<<<< HEAD
     background: linear-gradient(-45deg, black, pink, yellow, blue, grey);
+=======
+    background: linear-gradient(-45deg, black, pink, yellow, blue, grey);
+>>>>>>> 2da3f04ee5a3c05ba33c818537416440ca6f1ca2
     background-size: 400% 400%;
     position: relative;
     animation: change 10s ease-in-out infinite;
