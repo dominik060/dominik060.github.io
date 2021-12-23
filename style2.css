@@ -7,6 +7,12 @@
     background-color: black;
 }
 
+a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+}
+
 .navbar{
     display: flex;
     justify-content: center;
