@@ -11,7 +11,7 @@ html{
 
 section{
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
     color: #fff;
     background: linear-gradient(-45deg, black, pink, yellow, blue, grey);
     background-size: 400% 400%;
