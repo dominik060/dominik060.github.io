@@ -2,6 +2,8 @@
 
 body {
   background: #fff;
+  margin: 0;
+  padding: 0;
 }
 
 .title {
@@ -27,7 +29,7 @@ body {
 
 @keyframes scroll {
    100%{
-    background-position:0px -3000px;
+    background-position:0px -9000px;
   }
 }
 
