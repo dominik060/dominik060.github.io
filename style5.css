@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    margin: 20px 0px;
+    
+}
+
+.navbar ul li{
+    font-family: 'Comic Neue', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 8px 25px;
+    transition: all 0.5s ease;
+    margin: 3.5px;
+    border-radius: 10px;
+}
+
+.navbar ul li a:hover{
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 10px white;
+    border-radius: 10px;
+}
+
+
+
+/*#home{
+    display: flex;
+    flex-direction: column;
+}
+
+#home::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url("img/pexels-cliford-mervil-2469122.jpg");
+    height: 900px;
+    width: 100%;
+    z-index: -1;
+}*/
+
+
+
+.home_img{
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+    margin-top: 0;
+}
+ 
+ .home_img img{
+    filter: brightness(50%);
+    display:block; 
+    width:100%; 
+    margin:-65% 0 -35% 0;
+    
+ }
