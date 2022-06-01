@@ -97,7 +97,7 @@ nav{
     color: #51c4d3;
     font-size: 28px;
 }
-
+/*
 .nav-burger div{
     width: 40px;
     height: 3px;
@@ -107,7 +107,7 @@ nav{
 }
 .nav-burger{
     display: none;
-}
+}*/
 
 @media screen and (max-width:1000px){
     body{
@@ -117,7 +117,7 @@ nav{
         position: absolute;
         right: 0px;
         background-color: #222831;
-        width: 200px;
+        width: 250px;
         height: 92vh;
         top: 100%;
         display: flex;
@@ -130,10 +130,10 @@ nav{
         margin: 0.5rem;
         opacity: 0;
     }
-    .nav-burger{
+    /*.nav-burger{
         display: block;
         cursor: pointer;
-    }
+    }*/
 
 }
 
@@ -151,18 +151,92 @@ nav{
         transform: translateX(0px);
     }
 }
-
-.toggle .line1{
+/*
+.open .line1{
     transform: rotate(-45deg) translate(-7px,12px);
 }
-.toggle .line2{
+.open .line2{
     opacity: 0;
 }
-.toggle .line3{
+.open .line3{
     transform: rotate(45deg) translate(-7px,-12px);
-}
+}*/
 
-
+.burger-nav{
+    width: 60px;
+    height: 45px;
+    position: relative;
+    margin: 50px ;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .burger-nav span {
+    display: block;
+    position: absolute;
+    height: 9px;
+    width: 100%;
+    background: #51c4d3; /* barva                         */
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .45s ease-in-out;
+    -moz-transition: .45s ease-in-out;
+    -o-transition: .45s ease-in-out;
+    transition: .45s ease-in-out;
+  }
+  
+  
+  /* Icon 3 */
+  
+  .burger-nav span:nth-child(1) {
+    top: 0px;
+  }
+  
+  .burger-nav span:nth-child(2),.burger-nav span:nth-child(3) {
+    top: 18px;
+  }
+  
+  .burger-nav span:nth-child(4) {
+    top: 36px;
+  }
+  
+  .burger-nav.open span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
+  
+  .burger-nav.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  .burger-nav.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  
+  .burger-nav.open span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+  }
 
 
 

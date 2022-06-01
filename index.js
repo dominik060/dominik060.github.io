@@ -1,5 +1,5 @@
 const navSlide = () => {
-    const burger = document.querySelector('.nav-burger');
+    const burger = document.querySelector('.burger-nav');
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
 
@@ -15,7 +15,8 @@ const navSlide = () => {
             }
     });
     // burger animation
-    burger.classList.toggle('toggle');
+    burger.classList.toggle('open');
+
 
     });
 }
