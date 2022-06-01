@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cookie-container{
+    background: linear-gradient(260deg, #9b6c50 0%, #4f2626 100%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    display: flex;
+    height: 10rem;
+    width: 20rem;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    font-family: 'Lato', sans-serif;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.cookie{
+    /*transform: scale(0.5);*/
+    width: 6rem;
+}
+.cookie-text{
+    width: 60%;
+}
+.cookie-title{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.cookie-subtitle{
+    font-size: 0.8rem;
+    font-weight: 400;
+    padding: 0.5rem 0rem;
+}
+.cookie-button{
+    border-style: none;
+    padding: 0.5rem 1rem;
+    color:#4f2626;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    border-radius: 1rem;
+    display: flex;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+}
