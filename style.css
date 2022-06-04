@@ -111,6 +111,9 @@ nav{
 .burger-nav{
     display: none;
 }
+
+
+
 @media screen and (max-width:1000px){
     body{
         overflow-x: hidden;
@@ -129,7 +132,7 @@ nav{
         transition: transform 0.5s ease-in;
     }
     .nav-links li{
-        margin: 0.5rem;
+        margin: 0.5rem;      
         opacity: 0;
     }
     /*.nav-burger{
