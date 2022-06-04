@@ -84,6 +84,8 @@ main{
     height: 100%;
 }
 
+
+
 .nav-item{
     width: 100%;
 }
@@ -177,10 +179,12 @@ main{
         top: 0;
         width: 5rem;
         height: 100vh;
+        transition: var(--transition-speed);
     }
   
     .navbar:hover {
         width: 16rem;
+        
     }
     .navbar:hover .link-text {
         display: block;
