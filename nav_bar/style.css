@@ -115,7 +115,7 @@ main{
 }
 
 .nav-link svg {
-    min-width: 2rem;
+    width: 2rem;
     margin: 0 1.5rem;
     filter: invert(94%) sepia(14%) saturate(6771%) hue-rotate(155deg) brightness(88%) contrast(86%);
     /* filter for icon to be #51c4d3 */
@@ -186,3 +186,6 @@ main{
         display: block;
     }
 }
+
+
+
