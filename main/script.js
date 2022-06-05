@@ -26,6 +26,7 @@ themeButton.addEventListener("click", ()=>{
     }
 });
 
+/* function to turn body shadow when cursor is over nav bar
 function bodyShadowOn(){
     document.body.style.backgroundColor="rgba(0,0,0,0.3)";
 }
@@ -33,3 +34,4 @@ function bodyShadowOn(){
 function bodyShadowOff(){
     document.body.style.backgroundColor="rgba(0,0,0,0)";
 }
+*/
