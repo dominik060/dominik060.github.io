@@ -216,7 +216,7 @@ main{
 
 .home-text{
     color: var(--text-tertiary);
-    font-size: 40px;
+    font-size: 45px;
     text-align: center;
     position: relative;
     z-index: 10;
@@ -224,10 +224,13 @@ main{
     height: 270px;
     width: 700px;
     margin: auto;
+    padding: 0;
+    line-height: 0.9rem;
 }
-.home-text>b{
-    font-weight: bolder;
+.home-text h2{
+    font-size: 36px;
 }
+
 
 .waves{
     z-index: -1;
