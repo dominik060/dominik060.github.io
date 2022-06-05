@@ -47,7 +47,7 @@ body{
     background-color: white;
     margin: 0;
     padding: 0;
-    background-color: var(--bg-primary);
+    /*background-color: var(--bg-primary);*/
 }
 
 
@@ -183,17 +183,15 @@ main{
         top: 0;
         width: 5rem;
         height: 100vh;
-        transition: width var(--transition-speed)
+        transition: width var(--transition-speed) 100ms;
     }
   
     .navbar:hover {
         width: 16rem;
-        
     }
+
     .navbar:hover .link-text {
         display: block;
     }
 }
-
-
 

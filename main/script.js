@@ -26,3 +26,10 @@ themeButton.addEventListener("click", ()=>{
     }
 });
 
+function bodyShadowOn(){
+    document.body.style.background="rgba(0,0,0,0.3)";
+}
+
+function bodyShadowOff(){
+    document.body.style.background="rgba(0,0,0,0)";
+}
