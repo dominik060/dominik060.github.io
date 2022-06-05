@@ -69,6 +69,8 @@ main{
 }
 
 .navbar{
+    overflow-y: auto;
+    max-height: 100vh;
     position: fixed;
     background-color: var(--nav-bg-primary);
     transition: width 200ms ease;
