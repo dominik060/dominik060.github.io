@@ -47,7 +47,7 @@ body{
     background-color: white;
     margin: 0;
     padding: 0;
-
+    background-color: var(--bg-primary);
 }
 
 
@@ -116,10 +116,11 @@ main{
 .link-text{
     display: none;
     margin-left: 1rem;
+    transition: display 1000ms;
 }
 
 .nav-link svg {
-    width: 2rem;
+    width: 30px;
     margin: 0 1.5rem;
     filter: invert(91%) sepia(20%) saturate(1111%) hue-rotate(92deg) brightness(102%) contrast(108%);
     /* filter for icon https://codepen.io/sosuke/pen/Pjoqqp */
