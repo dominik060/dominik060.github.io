@@ -45,6 +45,7 @@
 
 html {
     scroll-behavior: smooth;
+    font-family: sans-serif;
   }
 
 body{
@@ -191,6 +192,7 @@ main{
  
 /* large screen */
 @media only screen and (min-width: 600px) {
+
     .navbar {
         top: 0;
         width: 5rem;
@@ -210,6 +212,7 @@ main{
 
 /*      Home    */
 #home{
+    top: 0;
     height: 100vh;
     background-color: var(--bg-primary);
 }
@@ -234,6 +237,8 @@ main{
 
 .waves{
     z-index: -1;
+    margin: 0;
+    
 }
 
 .custom-shape-divider-bottom-1654452472 {
@@ -540,4 +545,66 @@ main{
         font-size: 30px;
         width: auto;
     }
+}
+
+
+#about{
+    min-height: 100vh;
+    background-color: #eee;
+    z-index: -1;
+}
+
+.custom-shape-divider-top-1654540688 {
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    
+}
+
+.custom-shape-divider-top-1654540688 svg {
+    position: relative;
+    display: block;
+    width: calc(300% + 1.3px);
+    height: 286px;
+    shape-outside: polygon(10px 10px, 20px 20px, 30px 30px);
+}
+
+.custom-shape-divider-top-1654540688 .shape-fill {
+    fill: #303036;
+}
+
+@font-face {
+    font-family: 'Helvetica Now Display';
+    src: local('Helvetica Now Display Ext Lt'), local('Helvetica-Now-Display-Ext-Lt'),
+        url('HelveticaNowDisplay-ExtLt.woff2') format('woff2'),
+        url('HelveticaNowDisplay-ExtLt.woff') format('woff'),
+        url('HelveticaNowDisplay-ExtLt.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+.about-text{
+    position: relative;
+    z-index: 1;
+    margin-left: 7rem;
+    margin-right: 2rem;
+}
+
+.about-me{
+    margin: 0;
+    position: absolute;
+    z-index: -1;
+    transform: translateY(-50%);
+    font-family: "Helvetica Now Display", ;
+    font-size: 13rem;
+    color: rgba(238, 238, 238, 0.801);
+    overflow: hidden;
+    transform: translate(-50%, -50%);
+    opacity: 0.3;
+    font-weight: 900;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 3px var(--text-primary);
 }
