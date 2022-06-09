@@ -21,6 +21,8 @@ video {
     object-fit: cover;
     min-width: 20em;
     min-height: 30em;
+    aspect-ratio: 1/1;
+  width: 100vw;
   }
 
 svg rect{
