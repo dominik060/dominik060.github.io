@@ -1,0 +1,71 @@
+
+/*  About   */
+
+#about{
+    min-height: 100vh;
+    background-color: #eee;
+    z-index: -1;
+    
+}
+
+.custom-shape-divider-top-1654540688 {
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    
+}
+
+.custom-shape-divider-top-1654540688 svg {
+    position: relative;
+    display: block;
+    width: calc(300% + 1.3px);
+    height: 286px;
+    shape-outside: polygon(10px 10px, 20px 20px, 30px 30px);
+}
+
+.custom-shape-divider-top-1654540688 .shape-fill {
+    fill: #303036;
+}
+
+
+.about-text{
+    position: relative;
+    z-index: 1;
+    margin-left: 7rem;
+    margin-right: 2rem;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Seymour+One&display=swap');
+
+.about-me-box{
+    transform: translateY(-20%) translateX(-7rem);
+    width: 100vw;
+    height: 300px;
+    overflow: clip;
+    position: absolute;
+
+}
+
+
+.about-me{
+    display: block;
+    margin: 0;
+    position: absolute;
+    z-index: -1;
+    transform: translateY(-50%);
+    font-family: 'Seymour One', sans-serif;
+    font-size: 200px;
+    font-weight: 900;
+    font-style: normal;
+    color: rgba(238, 238, 238, 0.801);
+    overflow: hidden;
+    opacity: 1;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.5rem var(--text-primary);
+    
+}
+

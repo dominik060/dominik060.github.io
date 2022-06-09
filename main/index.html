@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>D0M1</title>
+    
     <!-- Stylesheet link -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/about.css">
+
     <!-- Montserrat font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +36,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#home" class="nav-link">
+                <a href="#" class="nav-link">
                     <div class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                             <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
@@ -86,10 +91,13 @@
         </ul>
     </nav>
     <!-- Script for navbar -->
-    <script src="js/navbar.js"></script>
+    <script src="js/navbar.js" ></script>
     
-    
+    <!-- Scroll tracker -->
+    <div class="scroll-tracker"></div>
+    <script src="js/scroll-timeline.js" type="module"></script>
 
+    <!-- Home section -->
     <section id="home">
         <div class="waves">
             <!-- Top waves-->
@@ -165,17 +173,14 @@
                 </svg>
             </div>
         </div>
-
         <div class="home-text">
             <h1>Hey! I am Domink.</h1>
             <h2>I am student and i like programming.</h2>
         </div>
-
     </section>
 
+    <!-- About section -->
     <section id="about">
-
-
         <div class="custom-shape-divider-top-1654540688">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M741,116.23C291,117.43,0,27.57,0,6V120H1200V6C1200,27.93,1186.4,119.83,741,116.23Z" class="shape-fill"></path>
@@ -183,7 +188,9 @@
         </div>
 
         <div class="about-text">
-            <span class="about-me">About </span>
+            <div class="about-me-box">
+                <span class="about-me">About </span>
+            </div>
             <div class="about-info">
                 <h3>Hi! My name is Dominik. I am student and my hobby is programming.</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur non suscipit assumenda, sed, voluptas aspernatur minus, accusantium sint dolores dolorum velit at reiciendis quam? Blanditiis aspernatur amet nam voluptatum nihil?</p>
@@ -191,7 +198,7 @@
             
             <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-            <script src="js/about-scroll.js"></script>
+            <script src="js/about-scroll.js" type="module"></script>
 
         </div>
     </section>

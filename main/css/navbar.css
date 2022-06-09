@@ -1,0 +1,133 @@
+.navbar{
+    z-index: 999;
+    overflow-y: auto;
+    max-height: 100vh;
+    position: fixed;
+    background-color: var(--nav-bg-primary);
+    transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+}
+
+.navbar-nav{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+
+
+.nav-item{
+    width: 100%;
+}
+
+.nav-item:last-child{
+    margin-top: auto;
+}
+
+.nav-link{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: var(--transition-speed);
+    cursor: pointer;
+    isolation: isolate;
+    appearance: none;
+}
+
+.nav-link:hover{
+    filter: grayscale(0%) opacity(1);
+    background: var(--nav-bg-secondary);
+    color: var(--text-secondary);
+    font-weight: 550;
+}
+
+.link-text{
+    display: none;
+    margin-left: 1rem;
+    transition: display 1000ms;
+}
+
+.nav-link svg {
+    width: 30px;
+    margin: 0 1.5rem;
+    filter: invert(91%) sepia(20%) saturate(1111%) hue-rotate(92deg) brightness(102%) contrast(108%);
+    /* filter for icon https://codepen.io/sosuke/pen/Pjoqqp */
+    transition: var(--transition-speed);
+    display: block;
+}
+
+
+
+.logo {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--text-secondary);
+    background: var(--nav-bg-secondary);
+    font-size: 1.5rem;
+    letter-spacing: 0.3ch;
+    width: 100%;
+}
+
+.logo svg {
+    transform: rotate(-180deg);
+    transition: var(--transition-speed);
+}
+
+.navbar:hover .logo svg {
+    transform: rotate(0deg);
+}
+
+/* small screen */
+@media only screen and (max-width: 600px) {
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+    }
+  
+    .logo {
+        display: none;
+    }
+  
+    .navbar-nav {
+        flex-direction: row;
+    }
+  
+    .nav-link {
+        justify-content: center;
+    }
+  
+    main {
+        margin: 0;
+    }
+  }
+ 
+/* large screen */
+@media only screen and (min-width: 600px) {
+
+    .navbar {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+        transition: width var(--transition-speed) 100ms;
+    }
+  
+    .navbar:hover {
+        width: 16rem;
+    }
+
+    .navbar:hover .link-text {
+        display: block;
+    }
+}
+
+
