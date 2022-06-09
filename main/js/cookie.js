@@ -12,3 +12,6 @@ const button=document.querySelector('.cookie-button');
 button.addEventListener("click", () => {
     gsap.to('.cookie-container', {opacity:0,y:150, duration:0.75, ease: 'power1.out'})
 })
+
+
+
