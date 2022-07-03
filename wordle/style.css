@@ -16,7 +16,7 @@ main {
 .board {
   text-transform: uppercase;
   margin: 0 auto;
-  width: 24em;
+  width: 24rem;
   display: grid;
   place-items: centre;
 }
