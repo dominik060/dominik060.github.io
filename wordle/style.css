@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+main {
+  text-align: center;
+}
+
+.board {
+  text-transform: uppercase;
+  margin: 0 auto;
+  width: 70%;
+  display: grid;
+  place-items: centre;
+}
+.board .grid {
+  display: grid;
+  grid-template-rows: repeat(6, auto);
+  grid-template-columns: repeat(5, auto);
+  gap: 10px;
+  margin-bottom: 5rem;
+}
+.board .grid .box {
+  width: 60px;
+  height: 60px;
+  border: 2px solid black;
+  margin: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+.board .grid .box.empty {
+  background-color: #3f3f41;
+}
+.board .grid .box.wrong {
+  background-color: #e05252;
+}
+.board .grid .box.right {
+  background-color: #52a84a;
+}
+
+.cursor {
+  -webkit-animation-name: blink;
+          animation-name: blink;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    background-color: #ffffff;
+  }
+  50% {
+    background-color: #e4e4e4;
+  }
+  100% {
+    background-color: #ffffff;
+  }
+}
+
+@keyframes blink {
+  0% {
+    background-color: #ffffff;
+  }
+  50% {
+    background-color: #e4e4e4;
+  }
+  100% {
+    background-color: #ffffff;
+  }
+}/*# sourceMappingURL=style.css.map */

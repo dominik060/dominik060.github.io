@@ -52,3 +52,7 @@
 .hide{
 	display: none;
 }
+
+.cookie-container{
+    display: none;
+}
