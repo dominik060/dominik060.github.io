@@ -3247,6 +3247,7 @@ function wait(milliseconds){
 async function revealWord(guess) {
     const row = state.currentRow;
     const delay = 400;
+    
     animation = !animation;
     for (var i = 0; i < 5; i++) {
         const box = document.querySelector(`#box${row}${i}`);
@@ -3261,7 +3262,7 @@ async function revealWord(guess) {
         await wait(delay);
     }
     animation = !animation;
-    
+
     const isWinner = state.secret == guess;
     const isGameOver = state.currentRow == 5;
 
