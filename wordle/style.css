@@ -9,6 +9,14 @@ html, body {
   text-align: center;
 }
 
+.warn-bg {
+  background-color: #ffe0e0;
+}
+
+.warn-box {
+  background-color: #ffa0a0 !important;
+}
+
 main {
   text-align: center;
 }
@@ -36,15 +44,50 @@ main {
   justify-content: center;
   align-items: center;
   font-size: 30px;
+  font-weight: 600;
 }
 .board .grid .box.empty {
   background-color: #3f3f41;
+  color: #e4e4e4;
 }
 .board .grid .box.wrong {
   background-color: #e05252;
+  color: #e4e4e4;
 }
 .board .grid .box.right {
   background-color: #52a84a;
+  color: #e4e4e4;
+}
+
+.keyboard {
+  width: 26rem;
+  grid-template-rows: auto;
+  margin: 0.5em auto 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.keyboard button {
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 0.2em;
+  font-size: 1.4em;
+  padding: 0 !important;
+  margin: 0.1em;
+  width: 1.5em;
+  height: 1.5em;
+  touch-action: manipulation;
+  background-color: #f4f4f4;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  margin-left: 0.4em;
+  width: 1.9em;
+  background-color: #f4f4f4;
+}
+.keyboard button:hover, .keyboard button:focus, .keyboard button:focus-visible {
+  background-color: #dadada;
+  outline: 0.15em solid rgba(50, 162, 206, 0.3960784314);
 }
 
 .cursor {

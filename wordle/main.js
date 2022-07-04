@@ -3091,6 +3091,8 @@ const state = {
     currentCol: 0,
 };
 
+let animation = false;
+
 function genBox(container, row, col, letter = "") {
     // create box function
     const box = document.createElement("div");
@@ -3126,19 +3128,40 @@ function refreshGrid() {
     }
 }
 
-function test() {
-    for (var i = 0; i < state.grid.length - 1; i++) {
-        for (var j = 0; i < state.grid[i].length; j++) {
-            const box = document.querySelector(`#box${i}${j}`);
-            console.log(box);
-            //box.textContent = state.grid[i][j];
-        }
+function genKeyboard(){
+    const keyboard = document.querySelector(".keyboard");
+    const keys = Object.keys(equivalentLetters);
+    for(var i=0;i<keys.length;i++){
+        const key = document.createElement("button");
+        const txt = keys[i]
+        key.textContent = txt;
+        key.id = `key-${keys[i]}`;
+        key.addEventListener("click", function(){
+            addLetter(txt);
+            refreshGrid();
+        });
+        keyboard.appendChild(key);
     }
+    const backspace = document.createElement("button");
+    backspace.addEventListener("click", () => {
+        removeLetter();
+        refreshGrid();
+    });
+    backspace.classList.add("backspace");
+    backspace.textContent = "⌫";
+    keyboard.appendChild(backspace);
+
+    const entre = document.createElement("button")
+    entre.addEventListener("click", ()=>entreFnc());
+    entre.classList.add("entre")
+    entre.textContent = "⏎";
+    keyboard.appendChild(entre);
 }
 
 function start() {
     const board = document.querySelector(".board");
     genGrid(board);
+    genKeyboard();
     registerKey();
 }
 
@@ -3146,22 +3169,33 @@ function isLetter(key) {
     return key.length === 1 && key.match(/[a-z]/i);
 }
 
+function entreFnc(){
+    if(animation) return;
+    if (state.currentCol == 5) {
+        const word = getCurrentWord();
+        // if(allWordsArr.includes(word)){
+        // if (wordOK) {
+        if(enWordsArr.includes(word)){
+            revealWord(word);
+            state.currentRow++;
+            state.currentCol = 0;
+        } else {
+            // window.alert("Tohle slovo neznám.");
+            warn();
+        }
+    }
+    else{
+        warn();
+    }
+}
+
 function registerKey() {
     document.body.onkeydown = (e) => {
+        if(animation) return;
         const key = e.key;
+        // console.log(key)
         if (key == "Enter") {
-            if (state.currentCol == 5) {
-                const word = getCurrentWord();
-                // if(allWordsArr.includes(word)){
-                // if (wordOK) {
-                if(enWordsArr.includes(word)){
-                    revealWord(word);
-                    state.currentRow++;
-                    state.currentCol = 0;
-                } else {
-                    window.alert("Tohle slovo neznám.");
-                }
-            }
+            entreFnc();
         }
         if (key == "Backspace") {
             removeLetter();
@@ -3170,8 +3204,22 @@ function registerKey() {
             addLetter(key);
         }
         refreshGrid();
-        // test()
+        
     };
+}
+
+function warn(){
+    warnClassToggle();
+    setTimeout(warnClassToggle, 500); 
+}
+
+function warnClassToggle(){
+    animation = !animation;
+    document.body.classList.toggle("warn-bg");
+    for(var i=0;i<5;i++){
+        const box = document.querySelector(`#box${state.currentRow}${i}`);
+        box.classList.toggle("warn-box");
+    }
 }
 
 function getCurrentWord() {
@@ -3190,12 +3238,19 @@ function removeLetter(letter) {
     state.currentCol--;
 }
 
-function revealWord(guess) {
+function wait(milliseconds){
+    return new Promise(resolve => {
+        setTimeout(resolve, milliseconds);
+    });
+}
+
+async function revealWord(guess) {
     const row = state.currentRow;
+    const delay = 400;
+    animation = !animation;
     for (var i = 0; i < 5; i++) {
         const box = document.querySelector(`#box${row}${i}`);
         const letter = box.textContent;
-        //console.log(letter)
         if (letter == state.secret[i]) {
             box.classList.add("right");
         } else if (state.secret.includes(letter)) {
@@ -3203,7 +3258,10 @@ function revealWord(guess) {
         } else {
             box.classList.add("empty");
         }
+        await wait(delay);
     }
+    animation = !animation;
+    
     const isWinner = state.secret == guess;
     const isGameOver = state.currentRow == 5;
 
@@ -3213,8 +3271,6 @@ function revealWord(guess) {
         window.alert(`You lost. The word was ${state.secreat}`);
     }
 }
-
-start();
 
 function wordOK(w) {
     var pos = 0;
@@ -3227,3 +3283,5 @@ function wordOK(w) {
     srvLog("w", w);
     return false;
 }
+
+start();
