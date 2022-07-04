@@ -108,16 +108,16 @@ main{
 
 }
 
-/*.cursor{
+.cursor{
     animation-name: blink;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
 }
 @keyframes blink {
-    0% {  background-color: #ffffff;}
-    50% { background-color: #e4e4e4;}
-    100% { background-color: #ffffff;}
-}*/
+    0% {  background-color: #fff;}
+    50% { background-color: #dadada;}
+    100% { background-color: #fff;}
+}
 
 .language-choose{
     position: absolute;

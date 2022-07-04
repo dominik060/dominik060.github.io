@@ -100,16 +100,38 @@ main #endTxt {
   outline: 0.15em solid rgba(50, 162, 206, 0.3960784314);
 }
 
-/*.cursor{
-    animation-name: blink;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
+.cursor {
+  -webkit-animation-name: blink;
+          animation-name: blink;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
+
+@-webkit-keyframes blink {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: #dadada;
+  }
+  100% {
+    background-color: #fff;
+  }
+}
+
 @keyframes blink {
-    0% {  background-color: #ffffff;}
-    50% { background-color: #e4e4e4;}
-    100% { background-color: #ffffff;}
-}*/
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: #dadada;
+  }
+  100% {
+    background-color: #fff;
+  }
+}
 .language-choose {
   position: absolute;
   top: 25%;

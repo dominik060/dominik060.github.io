@@ -3193,13 +3193,14 @@ function start() {
     genGrid(board);
     genKeyboard();
     registerKey();
+    document.querySelector(`#box00`).classList.add("cursor");
 }
 
 function isLetter(key) {
     return key.length === 1 && key.match(/[a-z]/i);
 }
 
-function entreFnc(){
+async function entreFnc(){
     if(animation || !isPlaying) return;
     if (state.currentCol == 5) {
         const word = getCurrentWord();
@@ -3209,6 +3210,8 @@ function entreFnc(){
             revealWord(word);
             state.currentRow++;
             state.currentCol = 0;
+            await wait(400*6);
+            document.querySelector(`#box${state.currentRow}${state.currentCol}`).classList.add("cursor");
         } else {
             // window.alert("Tohle slovo neznám.");
             warn();
@@ -3261,14 +3264,22 @@ function getCurrentWord() {
 function addLetter(letter) {
     if (state.currentCol == 5 || animation || !isPlaying) return;
     state.grid[state.currentRow][state.currentCol] = letter;
+    if(state.currentCol !== 4){
+        document.querySelector(`#box${state.currentRow}${state.currentCol+1}`).classList.add("cursor");
+    }
+    document.querySelector(`#box${state.currentRow}${state.currentCol}`).classList.remove("cursor");
     state.currentCol++;
 }
 
 function removeLetter(letter) {
-
     if (state.currentCol == 0 || animation || !isPlaying) return;
     state.grid[state.currentRow][state.currentCol - 1] = "";
+    document.querySelector(`#box${state.currentRow}${state.currentCol-1}`).classList.add("cursor");
+    if(state.currentCol !== 5){
+        document.querySelector(`#box${state.currentRow}${state.currentCol}`).classList.remove("cursor");
+    }
     state.currentCol--;
+    
 }
 
 function wait(milliseconds){
@@ -3319,5 +3330,3 @@ async function revealWord(guess) {
         // window.alert(`You lost. The word was ${state.secreat}`);
     }
 }
-
-
