@@ -19,6 +19,16 @@ html, body {
 
 main {
   text-align: center;
+  display: none;
+}
+main #rada {
+  display: none;
+  position: relative;
+  margin-top: 13rem;
+}
+main #endTxt {
+  display: absolute;
+  margin-bottom: 1rem;
 }
 
 .board {
@@ -33,7 +43,7 @@ main {
   grid-template-rows: repeat(6, auto);
   grid-template-columns: repeat(5, auto);
   gap: 10px;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 .board .grid .box {
   width: 60px;
@@ -62,7 +72,7 @@ main {
 .keyboard {
   width: 26rem;
   grid-template-rows: auto;
-  margin: 0.5em auto 0 auto;
+  margin: 0 auto 0 auto;
   position: absolute;
   left: 0;
   right: 0;
@@ -90,35 +100,62 @@ main {
   outline: 0.15em solid rgba(50, 162, 206, 0.3960784314);
 }
 
-.cursor {
-  -webkit-animation-name: blink;
-          animation-name: blink;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+/*.cursor{
+    animation-name: blink;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
 }
-
-@-webkit-keyframes blink {
-  0% {
-    background-color: #ffffff;
-  }
-  50% {
-    background-color: #e4e4e4;
-  }
-  100% {
-    background-color: #ffffff;
-  }
-}
-
 @keyframes blink {
-  0% {
-    background-color: #ffffff;
+    0% {  background-color: #ffffff;}
+    50% { background-color: #e4e4e4;}
+    100% { background-color: #ffffff;}
+}*/
+.language-choose {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  transform: translate(-50% -50%);
+  height: 50vh;
+  width: 50vw;
+  background-color: #dadada;
+  border: 5px solid #3f3f41;
+  border-radius: 30px;
+  box-shadow: 10px 10px 50px 15px #3f3f41;
+}
+.language-choose h2 {
+  margin: 2rem;
+  font-size: 3vw;
+}
+.language-choose input {
+  width: 4vw;
+  height: 25px;
+}
+.language-choose .inp {
+  margin-top: 3rem;
+  font-size: 1.7rem;
+}
+.language-choose button {
+  text-align: center;
+  border-radius: 0.2em;
+  font-size: 1.4em;
+  padding: 1rem;
+  margin-top: 2rem;
+  width: 10rem;
+  background-color: #f4f4f4;
+  box-shadow: 5px 5px 10px 3px #3f3f41;
+}
+.language-choose button:hover, .language-choose button:focus, .language-choose button:focus-visible {
+  background-color: #dadada;
+}
+
+@media only screen and (max-width: 550px) {
+  .language-choose h2 {
+    font-size: 25px;
   }
-  50% {
-    background-color: #e4e4e4;
+  .language-choose input {
+    height: 17px;
   }
-  100% {
-    background-color: #ffffff;
+  .language-choose .inp {
+    font-size: 1.2rem;
   }
 }/*# sourceMappingURL=style.css.map */

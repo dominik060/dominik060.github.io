@@ -11,11 +11,22 @@
 </head>
 
 <body>
+    <div class="language-choose">
+        <h2>Select game language:</h2>
+        <form class="inp">
+            <input type="radio" name="langChoose" value="cs" checked>Czech</input>
+            <input type="radio" name="langChoose" value="en">English</input>
+            <br>
+            <button type="button" class="playBtn" onclick="play()">Play</button>
+        </form>
+   </div>
     <main>
-        <h1>Wordle</h1>
+        <h1 id="wordle">Wordle</h1>
         <div class="board"></div>
+        <h2 id="endTxt">Vyhrál jsi!</h2>
         <div class="keyboard"></div>
-        <!-- <h4>Pište to bez diakritiky!</h4> -->
+        <h4 id="rada">Piš to bez diakritiky :).</h4>
+        
     </main>
     <script src="main.js"></script>
 </body>
